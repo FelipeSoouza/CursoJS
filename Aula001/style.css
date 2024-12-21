@@ -1,0 +1,13 @@
+.formulario {
+    display: inline-block
+
+}
+
+#form {
+    display: flex;
+    margin: 10px;
+}
+
+button {
+    margin-left: 10px;
+}
