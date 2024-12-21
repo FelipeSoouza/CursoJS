@@ -1,0 +1,27 @@
+body{
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    background-color: #f3f0efd3;
+    border-radius: 8px;
+    padding: 15px;
+    width: 350px;
+    margin: auto;
+    margin-top: 350px;
+}  
+
+input[type="text"]{
+    padding: 3px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-enviar{
+    margin-top: 5px ;
+    color: #fff;
+    background-color: #633726; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
