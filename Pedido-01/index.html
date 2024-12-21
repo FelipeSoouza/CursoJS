@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+        margin-right: 30px;
+        
+    }
+
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    .simBtn {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        width: 150px;
+        border-radius: 10px;
+    }
+
+    .naoBtn {
+        position: absolute;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        width: 150px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <h1>Caribbean hoje?</h1>
+
+    <div class="container" id="container">
+        <button class="simBtn" id="simBtn">Sim</button>
+        <button class="naoBtn" id="naoBtn">Não</button>
+    </div>
+
+<script>
+    const simBtn = document.getElementById('simBtn');
+    simBtn.addEventListener('click', function() {
+        alert("Bora caraio, vou descer o combo! As do Job vem miando!");
+    });
+
+    const naoBtn = document.getElementById('naoBtn');
+    const container = document.getElementById('container');
+
+    container.addEventListener('mousemove', function (event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        const rect = naoBtn.getBoundingClientRect();  
+
+        const buttonX = rect.left + rect.width / 2;
+        const buttonY = rect.top + rect.height / 2;
+
+        const dx = mouseX - buttonX;
+        const dy = mouseY - buttonY;
+
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 100) {
+            const newTop = Math.random() * (container.offsetHeight - naoBtn.offsetHeight);
+            const newLeft = Math.random() * (container.offsetWidth - naoBtn.offsetWidth);
+
+            naoBtn.style.top = `${newTop}px`;
+            naoBtn.style.left = `${newLeft}px`;
+        }
+    });
+</script>
+</body>
+</html>
