@@ -1,0 +1,35 @@
+#list-pokemons {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os cards se ajustem em múltiplas linhas */
+    justify-content: space-around;  /* Distribui os cards igualmente */
+    padding: 20px;
+}
+
+.pokemon-card {
+    background-color: #f9f9f9; /* Cor de fundo dos cards */
+    border-radius: 15px;  /* Cantos arredondados */
+    padding: 15px;
+    width: 150px;  /* Largura fixa para os cards */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.pokemon-card img {
+    width: 100px;  /* Define o tamanho da imagem do Pokémon */
+    height: 100px;  /* Mantém a proporção da imagem */
+    margin-bottom: 10px;
+}
+
+.pokemon-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.center {
+    text-align: center;
+}
+
+.ash {
+    text-align: center;
+}
